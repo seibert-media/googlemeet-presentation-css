@@ -1,0 +1,58 @@
+@-moz-document url-prefix("https://meet.google.com/") {
+/**
+ * Use together with Toggle-Bookmarklet, see https://github.com/seibert-media/googlemeet-presentation-css
+ */
+
+/* Top Right Menu */
+body.clean-meet .NzPR9b { display: none !important }
+  
+/* On-Hover-Footer */
+body.clean-meet .rG0ybd { display: none !important }
+  
+/* Recording-Marker */
+body.clean-meet .pHsCke { display: none !important }
+  
+/* Speakers-Marker */
+body.clean-meet .lMHHZ { display: none !important }
+body.clean-meet .ZY8hPc {display: none !important }
+
+/* Own Camera*/
+body.clean-meet .aGWPv { display: none !important }
+
+/* User is presenting */
+body.clean-meet .pHsCke { display: none !important }
+
+/* Remove */
+body.clean-meet .zWfAib { inset: 0px  !important }
+
+/* Rounded Borders */
+body.clean-meet .Zf0RDc { border-radius:0px !important }
+
+/* Hide other Videos */
+body.clean-meet .xsj2Ff:not([data-allocation-index="0"]) { display: none !important }
+
+/* Scale Video to Fullscreen */
+body.clean-meet .xsj2Ff[data-allocation-index="0"],
+body.clean-meet .p2hjYe.TPpRNe,
+body.clean-meet .p2hjYe.TPpRNe .Gv1mTb-aTv5jf {
+    top: 0px !important;
+    left: 0px !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Currently speaking Indicator */
+body.clean-meet .atLQQ {display: none !important }
+  
+/* Ask to Join Dialog & Background */
+body.clean-meet .llhEMd.iWO5td { display: none !important }
+  
+/* Left the Meeting Popup */
+body.clean-meet .Mh0NNb.Mp2Z0b.misTTe  { display: none !important }
+  
+/* is now sharing Overlay */
+body.clean-meet .a4I7Fe { display: none !important }
+
+/* New User Indicator */
+body.clean-meet .NSvDmb.cM3h5d { display: none !important }
+}
