@@ -71,6 +71,17 @@ In OBS we select the Windows to capture based on their title. Google Meet gives 
 The Window-Titles are also important to be able to quickly switch to the Windws and Un-Pin or Re-Pin speakers during a live link-up.
 
 
+Local Video Feed (Partially Remote Setup)
+-----------------------------------------
+**Warning** Our Hybrid Setup is quite a bit more involved. Do not hesitate, you don't need any of this when you run fully remote.
+
+While this Setup does work perfectly fine for fully remote events, for the bigger and more professional events we usually do not run fully-remote but have a very small crew on-set with the Moderators to at least give the feeling of being kind-of sort-of there in person. We use our Broadcast or DLSR-Cameras and professional wireless Microphones together with an [Elgato Camlink 4k](https://www.elgato.com/de/cam-link-4k) HDMI-to-USB3 Stick to feed the Camera- and Audio-Input of Google Meet. This gives the Speakers a good Video- and Audio-Signal of the Moderators on Stage. Under Linux this required a [Trick to fix Elgato Camlink4k colorspace](https://github.com/xkahn/camlink).
+
+In such a Hybrid Scenario we we usually also feed the SDI-Signals from all our Cameras into one of our [DeckLink Duo2](https://www.blackmagicdesign.com/de/products/decklink/techspecs/W-DLK-31) Cards and us them in the OBS as Local Camera Sources. We can also recommend to use one of the Duo2's Ports as Output and send the Program-Signal to a TV for the Moderators to see what is actually currently being broadcasts. In this scenario we use a Monitoring Speaker instead of Headphones for Audio Monitoring.
+
+[![Picture of the T4AT Setup](https://pbs.twimg.com/media/EoY831_WMAA_2un?format=jpg)](https://twitter.com/mazdermind/status/1334821274498052098)
+
+
 Computer / OS / General Setup Recommendations
 ---------------------------------------------
 We mostly used *(L)Ubuntu Linux* and do not know if all the tricks (Audio-Output capture, stacking Fullscreen-Windows, …) will work on other OSes. We recommend *Google Chrome* over Chromium or even Firefox for best performance with Google Meet.
