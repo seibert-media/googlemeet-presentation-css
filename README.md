@@ -27,6 +27,7 @@ After preparing our Google Chrome with the Plugins and Configuration below, we o
 When the first guests arriv, we Pin them and their Slides in their respective Windows and start Mixing with OBS. We can prepare the next guests in separate Windows and quickly switch to a prepared scene in OBS, when they are ready.
 
 You can get a better understanding of the Operation from this quick YouTube Presentation I gave (with an oder Version of the Meet-CSS):
+
 [![YouTube Presentation](https://img.youtube.com/vi/uoKLjwIZgiw/0.jpg)](https://www.youtube.com/watch?v=uoKLjwIZgiw)
 
 
