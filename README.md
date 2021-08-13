@@ -13,7 +13,7 @@ TL;DR
  - [Stylus Extension for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
  - [Mute Tab Extension for Chrome](https://chrome.google.com/webstore/detail/mute-tab/blljobffcekcbopmkgfhpcjmbfnelkfg)
  - [uBlock Origin Extension for Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=de)
- - [user-css.css for Clean Feed](user-css.css)
+ - [User-CSS for Clean Feed](user-style.css)
  - [URL Patterns to block with uBlock](ublock-url-patterns.txt)
  - [Bookmarklets](https://mazdermind.de/googlemeet-presentation-css/bookmarklets.html)
 
@@ -35,7 +35,7 @@ User-CSS
 --------
 Ideally we want to use the speaker's webcam like a remote camera, giving us a pure video-feed of their camera. We also want them to be able to share their screen at the same time. Also multiple Speakers must be able to join the call and see the others presenting. They should also be able to share their screens while the other presentation is still running, to allow a seamless hand-over. Speakers joining, leaving, sharing or chatting should not resut in any visible or audible signal in our Clean-Feed. Lastly we want to be able to switch from Clean-Feed to the normal UI to change which guest is visible in which Window.
 
-We achive this by applying a User-Stylesheet [user-css.css](user-css.css) to Google Meet using the [Stylus Extension for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne). The User-CSS, once activated, hides all the UI Elements and set the pinned Video to fullscreen with no borders or edges. To activate it, we use a Bookmarket which sets a CSS-Class on the body Tag (enabling the User-CSS) and sends the Browser into Fullscreen-Mode. It also automatically detects when you leave Fullscreen Mode again and removes the Class, thus deactivating the User-CSS and allwing interaction with the UI again. There is also a minimal Variant which only toggles the CSS Class and does not mess with the Fullscreen-State:
+We achive this by applying a User-Stylesheet [User-CSS](User-CSS) to Google Meet using the [Stylus Extension for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne). The User-CSS, once activated, hides all the UI Elements and set the pinned Video to fullscreen with no borders or edges. To activate it, we use a Bookmarket which sets a CSS-Class on the body Tag (enabling the User-CSS) and sends the Browser into Fullscreen-Mode. It also automatically detects when you leave Fullscreen Mode again and removes the Class, thus deactivating the User-CSS and allwing interaction with the UI again. There is also a minimal Variant which only toggles the CSS Class and does not mess with the Fullscreen-State:
 
 [Bookmarklets](https://mazdermind.de/googlemeet-presentation-css/bookmarklets.html)
 
