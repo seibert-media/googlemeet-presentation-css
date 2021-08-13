@@ -14,16 +14,8 @@ TL;DR
  - [Mute Tab Extension for Chrome](https://chrome.google.com/webstore/detail/mute-tab/blljobffcekcbopmkgfhpcjmbfnelkfg)
  - [uBlock Origin Extension for Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=de)
  - [user-css.css for Clean Feed](user-css.css)
- - <a href="javascript:(function()%7Bif(document.body.classList.toggle('clean-meet')) %7B document.documentElement.requestFullscreen()%3B %7Ddocument.addEventListener('fullscreenchange'%2C (e) %3D> %7B if(!document.fullscreen) %7B document.body.classList.remove('clean-meet') %7D %7D)%7D)()">Bookmarklet to Toggle Clean Feed Mode</a>
  - [URL Patterns to block with uBlock](ublock-url-patterns.txt)
- - Bookmarklets to set Window-Title:
-   - <a href="javascript:(function()%7Bdocument.title%3D'Speaker 1'%7D)()">Speaker 1</a>
-   - <a href="javascript:(function()%7Bdocument.title%3D'Speaker 2'%7D)()">Speaker 2</a>
-   - <a href="javascript:(function()%7Bdocument.title%3D'Speaker 3'%7D)()">Speaker 3</a>
-   - <a href="javascript:(function()%7Bdocument.title%3D'Moderator 1'%7D)()">Moderator 1</a>
-   - <a href="javascript:(function()%7Bdocument.title%3D'Moderator 2'%7D)()">Moderator 2</a>
-   - <a href="javascript:(function()%7Bdocument.title%3D'Slides 1'%7D)()">Slides 1</a>
-   - <a href="javascript:(function()%7Bdocument.title%3D'Slides 2'%7D)()">Slides 2</a>
+ - [Bookmarklets](https://mazdermind.de/googlemeet-presentation-css/bookmarklets.html)
 
 
 Principle of Operation
@@ -42,9 +34,9 @@ User-CSS
 --------
 Ideally we want to use the speaker's webcam like a remote camera, giving us a pure video-feed of their camera. We also want them to be able to share their screen at the same time. Also multiple Speakers must be able to join the call and see the others presenting. They should also be able to share their screens while the other presentation is still running, to allow a seamless hand-over. Speakers joining, leaving, sharing or chatting should not resut in any visible or audible signal in our Clean-Feed. Lastly we want to be able to switch from Clean-Feed to the normal UI to change which guest is visible in which Window.
 
-We achive this by applying a User-Stylesheet [user-css.css](user-css.css) to Google Meet using the [Stylus Extension for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne). The User-CSS, once activated, hides all the UI Elements and set the pinned Video to fullscreen with no borders or edges. To activate it, we use a Bookmarket which sets a CSS-Class on the body Tag (enabling the User-CSS) and sends the Browser into Fullscreen-Mode. It also automatically detects when you leave Fullscreen Mode again and removes the Class, thus deactivating the User-CSS and allwing interaction with the UI again.
+We achive this by applying a User-Stylesheet [user-css.css](user-css.css) to Google Meet using the [Stylus Extension for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne). The User-CSS, once activated, hides all the UI Elements and set the pinned Video to fullscreen with no borders or edges. To activate it, we use a Bookmarket which sets a CSS-Class on the body Tag (enabling the User-CSS) and sends the Browser into Fullscreen-Mode. It also automatically detects when you leave Fullscreen Mode again and removes the Class, thus deactivating the User-CSS and allwing interaction with the UI again. There is also a minimal Variant which only toggles the CSS Class and does not mess with the Fullscreen-State:
 
-Bookmarklet: <a href="javascript:(function()%7Bif(document.body.classList.toggle('clean-meet')) %7B document.documentElement.requestFullscreen()%3B %7Ddocument.addEventListener('fullscreenchange'%2C (e) %3D> %7B if(!document.fullscreen) %7B document.body.classList.remove('clean-meet') %7D %7D)%7D)()">Toggle Clean Feed Mode</a>
+[Bookmarklets](https://mazdermind.de/googlemeet-presentation-css/bookmarklets.html)
 
 
 Video Resolution
@@ -59,16 +51,7 @@ To get the Audio sorted we use the[Mute Tab Extension for Chrome](https://chrome
 
 OBS Capture & Window Titles
 ---------------------------
-In OBS we select the Windows to capture based on their title. Google Meet gives every Window the same title, so we'll change them ahead of time to something meaningful using Bookmarklets:
-- <a href="javascript:(function()%7Bdocument.title%3D'Speaker 1'%7D)()">Speaker 1</a>
-- <a href="javascript:(function()%7Bdocument.title%3D'Speaker 2'%7D)()">Speaker 2</a>
-- <a href="javascript:(function()%7Bdocument.title%3D'Speaker 3'%7D)()">Speaker 3</a>
-- <a href="javascript:(function()%7Bdocument.title%3D'Moderator 1'%7D)()">Moderator 1</a>
-- <a href="javascript:(function()%7Bdocument.title%3D'Moderator 2'%7D)()">Moderator 2</a>
-- <a href="javascript:(function()%7Bdocument.title%3D'Slides 1'%7D)()">Slides 1</a>
-- <a href="javascript:(function()%7Bdocument.title%3D'Slides 2'%7D)()">Slides 2</a>
-
-The Window-Titles are also important to be able to quickly switch to the Windws and Un-Pin or Re-Pin speakers during a live link-up.
+In OBS we select the Windows to capture based on their title. Google Meet gives every Window the same title, so we'll change them ahead of time to something meaningful using [Bookmarklets](https://mazdermind.de/googlemeet-presentation-css/bookmarklets.html). The Window-Titles are also important to be able to quickly switch to the Windws and Un-Pin or Re-Pin speakers during a live link-up.
 
 
 Local Video Feed (Partially Remote Setup)

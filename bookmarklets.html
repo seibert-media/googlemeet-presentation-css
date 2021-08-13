@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Google Meet Bookmarklets</title>
+</head>
+<body>
+<h1>Google-Meet for Remote Presentations – Bookmarklets</h1>
+<p>See <a href="https://github.com/seibert-media/googlemeet-presentation-css">github.com/seibert-media/googlemeet-presentation-css</a> for Documentation and matching User-CSS</p>
+
+<h2>Toggle Clean Feed Mode</h2>
+<ul>
+	<li>Toggle <a href="javascript:(function()%7Bif(document.body.classList.toggle('clean-meet')) %7B document.documentElement.requestFullscreen()%3B %7Ddocument.addEventListener('fullscreenchange'%2C (e) %3D> %7B if(!document.fullscreen) %7B document.body.classList.remove('clean-meet') %7D %7D)%7D)()">Google Meet Clean Feed</a> Mode – with Fullscreen Logic</li>
+	<li>Toggle <a href="javascript:(function()%7Bdocument.body.classList.toggle('clean-meet')%7D)()">Google Meet Clean Feed</a> Mode – without Fullscreen Logic</li>
+</ul>
+
+<h2>Set Window Titles</h2>
+<ul>
+	<li><a href="javascript:(function()%7Bdocument.title%3D'Speaker 1'%7D)()">Speaker 1</a></li>
+	<li><a href="javascript:(function()%7Bdocument.title%3D'Speaker 2'%7D)()">Speaker 2</a></li>
+	<li><a href="javascript:(function()%7Bdocument.title%3D'Speaker 3'%7D)()">Speaker 3</a></li>
+	<li><a href="javascript:(function()%7Bdocument.title%3D'Moderator 1'%7D)()">Moderator 1</a></li>
+	<li><a href="javascript:(function()%7Bdocument.title%3D'Moderator 2'%7D)()">Moderator 2</a></li>
+	<li><a href="javascript:(function()%7Bdocument.title%3D'Slides'%7D)()">Slides</a></li>
+</ul>
+</body>
+</html>
