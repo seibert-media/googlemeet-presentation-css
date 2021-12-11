@@ -38,6 +38,13 @@
     updateLeaderState();
   }, 500);
 
+  window.addEventListener('beforeunload', function (e) {
+    e.preventDefault();
+    e.stopImmediatePropagation();
+    e.stopPropagation();
+    e.returnValue = 'Don\'t leave me this way...';
+  });
+
   function transmitExistence() {
     if(!isOperable()) {
       return;
