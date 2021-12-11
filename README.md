@@ -11,9 +11,10 @@ We are aware that there are other and even more dedicated Solutions (including S
 TL;DR
 -----
  - [Stylus Extension for Chrome](https://chrome.google.com/webstore/detail/stylus/clngdbkpkpeebahjckkjfobafhncgmne)
- - [Mute Tab Extension for Chrome](https://chrome.google.com/webstore/detail/mute-tab/blljobffcekcbopmkgfhpcjmbfnelkfg)
- - [uBlock Origin Extension for Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=de)
+ - [Tampermonkey Extension for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo)
+ - [uBlock Origin Extension for Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm)
  - [User-CSS for Clean Feed](user-style.css)
+ - [User-Script for Automatic Mute-Management](user-script.js)
  - [URL Patterns to block with uBlock](ublock-url-patterns.txt)
  - [Bookmarklets](https://mazdermind.de/googlemeet-presentation-css/bookmarklets.html)
 
@@ -22,9 +23,9 @@ Principle of Operation
 ----------------------
 The setup we used is based on the Idea that we can join the same Google Meet Video-Call multiple times with different Browser-Windows.This way we can have each Speaker and each Slide-Share in a different window. We can then use the Window-Capture-Feature of OBS to capture each window individually and have each of them as a separate source.
 
-After preparing our Google Chrome with the Plugins and Configuration below, we open up a many Windows as we expect to need, join the same Meet with all of them, set their Window-Titles to something meaningful using the Bookmarklets below, mute all of them but one using the *Mute Tab* Plugin. We then configure our OBS Scenes to show all the combinations if Speaker, Slides and Moderator we need (here is [our configuration from T4AT 2020](T4AT_Live.json)).
+After preparing our Google Chrome with the Plugins and Configuration below, we open up a many Windows as we expect to need, join the same Meet with all of them, set their Window-Titles to something meaningful using the Bookmarklets below. The Leader-Election/Auto-Mute Script will automaticly mute all of them but one. We then configure our OBS Scenes to show all the combinations if Speaker, Slides and Moderator we need (here is [our configuration from T4AT 2020](T4AT_Live.json)).
 
-When the first guests arriv, we Pin them and their Slides in their respective Windows and start Mixing with OBS. We can prepare the next guests in separate Windows and quickly switch to a prepared scene in OBS, when they are ready.
+When the first guests arrive, we Pin them and their Slides in their respective Windows and start Mixing with OBS. We can prepare the next guests in separate Windows and quickly switch to a prepared scene in OBS, when they are ready.
 
 You can get a better understanding of the Operation from this quick YouTube Presentation I gave (with an oder Version of the Meet-CSS):
 
@@ -47,7 +48,7 @@ We produce all our Videos at a 1920x1080 ("FullHD") resolution. To get a full 19
 
 Audio
 -----
-To get the Audio sorted we use the[Mute Tab Extension for Chrome](https://chrome.google.com/webstore/detail/mute-tab/blljobffcekcbopmkgfhpcjmbfnelkfg), which allows us to mute all Tabs but one. We then use the Audio *Output Capture Source* in OBS to get a Feed of the pre-mixed and normalized audio produced by Google Meet. To get rid of the audible indicators the Meet plays, when a user joins, leaves or leaves a chat message, we use the [uBlock Origin Extension for Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=de) with this custom [URL Patterns to block with uBlock](ublock-url-patterns.txt). They will prevent Google Meet from downloading (and thus playing back) any Sounds.
+To get the Audio sorted we use a [User-Script](user-script.js) which is injected into all Google Meet Tabs by the [Tampermonkey Extension](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo). We then use the Audio *Output Capture Source* in OBS to get a Feed of the pre-mixed and normalized audio produced by Google Meet. To get rid of the audible indicators the Meet plays, when a user joins, leaves or leaves a chat message, we use the [uBlock Origin Extension for Chrome](https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=de) with this custom [URL Patterns to block with uBlock](ublock-url-patterns.txt). They will prevent Google Meet from downloading (and thus playing back) any Sounds.
 
 
 OBS Capture & Window Titles
