@@ -82,6 +82,11 @@
   }
 
   function updateLeaderState() {
+    if(Object.keys(contexts).length < 2) {
+      console.debug('updateLeaderState : only one context - not modifying state');
+      return;
+    }
+
     const leaderId = findLeaderId();
     const isLeader = (leaderId === contextId);
     console.debug('updateLeaderState : isLeader=%s leaderId=%s contextId=%s', isLeader, leaderId, contextId);
